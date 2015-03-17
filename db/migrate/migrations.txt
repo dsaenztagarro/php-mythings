@@ -1,0 +1,38 @@
+CREATE USER 'development'@'localhost' IDENTIFIED BY 'development';
+GRANT ALL PRIVILEGES ON * . * TO 'development'@'localhost';
+
+CREATE TABLE thing (
+  id int(11) NOT NULL auto_increment,
+  artist varchar(100) NOT NULL,
+  title varchar(100) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO thing (artist, title)
+    VALUES  ('The  Military  Wives',  'In  My  Dreams');
+INSERT INTO thing (artist, title)
+    VALUES  ('Adele',  '21');
+INSERT INTO thing (artist, title)
+    VALUES  ('Bruce  Springsteen',  'Wrecking Ball (Deluxe)');
+INSERT INTO thing (artist, title)
+    VALUES  ('Lana  Del  Rey',  'Born  To  Die');
+INSERT INTO thing (artist, title)
+    VALUES  ('Gotye',  'Making  Mirrors');
+
+CREATE TABLE posts (
+  id int(11) NOT NULL auto_increment,
+  title varchar(100) NOT NULL,
+  text TEXT NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO posts (title, text)
+  VALUES  ('Blog #1',  'Welcome to my first blog post');
+INSERT INTO posts (title, text)
+  VALUES  ('Blog #2',  'Welcome to my second blog post');
+INSERT INTO posts (title, text)
+  VALUES  ('Blog #3',  'Welcome to my third blog post');
+INSERT INTO posts (title, text)
+  VALUES  ('Blog #4',  'Welcome to my fourth blog post');
+INSERT INTO posts (title, text)
+  VALUES  ('Blog #5',  'Welcome to my fifth blog post');
