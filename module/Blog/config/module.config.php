@@ -29,8 +29,8 @@ return array(
     ),
 
     'service_manager' => array(
-        'invokables' => array(
-            'Blog\Service\PostServiceInterface' => 'Blog\Service\PostService'
+        'factories' => array(
+            'Blog\Service\PostServiceInterface' => 'Blog\Factory\PostServiceFactory'
         )
     ),
 );
