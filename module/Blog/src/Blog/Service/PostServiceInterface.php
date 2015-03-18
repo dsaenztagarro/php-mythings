@@ -4,15 +4,10 @@ namespace Blog\Service;
 
 use Blog\Model\PostInterface;
 
-/**
- * Interface PostServiceInterface
- * @author David Saenz
- */
 interface PostServiceInterface
 {
     /**
-     * Should return a set of all blog posts that we can iterate over.
-     * Single entries of the array are supposed to be
+     * Should return a set of all blog posts that we can iterate over. Single entries of the array are supposed to be
      * implementing \Blog\Model\PostInterface
      *
      * @return array|PostInterface[]
@@ -26,4 +21,13 @@ interface PostServiceInterface
      * @return PostInterface
      */
     public function findPost($id);
+
+    /**
+     * Should save a given implementation of the PostInterface and return it. If it is an existing Post the Post
+     * should be updated, if it's a new Post it should be created.
+     *
+     * @param  PostInterface $blog
+     * @return PostInterface
+     */
+    public function savePost(PostInterface $blog);
 }

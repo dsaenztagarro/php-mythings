@@ -6,6 +6,16 @@ use Blog\Service\PostServiceInterface;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+/**
+ * Class: ListController
+ *
+ * @author    Development <desarrollo@hola-internet.com>
+ * @copyright 2013 Hola.com
+ * @license   Apache 2 License http://www.apache.org/licenses/LICENSE-2.0.html
+ * @version   Release: <0.1.0>
+ * @link      http://www.hola.com
+ * @since     Class available since Release 0.1.0
+ */
 class ListController extends AbstractActionController
 {
     protected $postService;
